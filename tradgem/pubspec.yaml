@@ -1,0 +1,27 @@
+name: tradutor_app
+description: Tradutor com Gemini API - Projeto POO Flutter
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_hooks: ^0.20.5
+  get: ^4.6.6
+  http: ^1.2.1
+  flutter_svg: ^2.0.10+1
+  flutter_dotenv: ^6.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
