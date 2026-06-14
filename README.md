@@ -1,0 +1,2 @@
+# TradGem
+Tradutor de Idiomas
