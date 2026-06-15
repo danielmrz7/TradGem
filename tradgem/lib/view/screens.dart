@@ -5,9 +5,6 @@ import '../service/translation_service.dart';
 import 'widgets.dart';
 import '../model/language.dart';
 
-// ═══════════════════════════════════════════════════════════════
-// TELA 1: Home — Tradução principal (estilo LLM / ChatGPT)
-// ═══════════════════════════════════════════════════════════════
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -61,7 +58,6 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 16),
 
-            // Título estilo LLM
             const Center(
               child: Column(
                 children: [
@@ -84,73 +80,19 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Barra de idiomas com bandeiras
             const LanguageBarWidget(),
 
             const SizedBox(height: 16),
 
-            // Caixa de tradução principal
             const TranslationBoxWidget(),
 
             const SizedBox(height: 32),
-
-            // Atalhos de idiomas rápidos
-            const Text(
-              'Idiomas rápidos',
-              style: TextStyle(color: Colors.white54, fontSize: 13),
-            ),
-            const SizedBox(height: 10),
-            _QuickLanguagesRow(),
           ],
         ),
       ),
     );
   }
 }
-
-// Linha de atalhos de idiomas rápidos
-class _QuickLanguagesRow extends StatelessWidget {
-  final List<Map<String, String>> quick = const [
-    {'flag': '🇧🇷', 'name': 'PT'},
-    {'flag': '🇺🇸', 'name': 'EN'},
-    {'flag': '🇪🇸', 'name': 'ES'},
-    {'flag': '🇫🇷', 'name': 'FR'},
-    {'flag': '🇩🇪', 'name': 'DE'},
-    {'flag': '🇯🇵', 'name': 'JA'},
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: quick.map((lang) {
-        return GestureDetector(
-          onTap: () {
-            final found = availableLanguages.firstWhere(
-              (l) => l.code == lang['name']!.toLowerCase(),
-              orElse: () => availableLanguages[1],
-            );
-            translationService.selecionarIdiomaDestino(found);
-          },
-          child: Column(
-            children: [
-              Text(lang['flag']!, style: const TextStyle(fontSize: 28)),
-              const SizedBox(height: 4),
-              Text(
-                lang['name']!,
-                style: const TextStyle(color: Colors.white54, fontSize: 11),
-              ),
-            ],
-          ),
-        );
-      }).toList(),
-    );
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TELA 2: Histórico de traduções
-// ═══════════════════════════════════════════════════════════════
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
 
@@ -230,9 +172,6 @@ class HistoryScreen extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// TELA 3: Favoritos
-// ═══════════════════════════════════════════════════════════════
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
 
@@ -292,9 +231,6 @@ class FavoritesScreen extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// TELA 4: Sobre o App
-// ═══════════════════════════════════════════════════════════════
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 

@@ -27,13 +27,12 @@ class TranslationService {
       ValueNotifier([]);
 
   final ValueNotifier<Language> sourceLangNotifier =
-      ValueNotifier(availableLanguages[0]); // Português
+      ValueNotifier(availableLanguages[0]);
 
   final ValueNotifier<Language> targetLangNotifier =
-      ValueNotifier(availableLanguages[1]); // Inglês
+      ValueNotifier(availableLanguages[1]);
 
-  // ─── Funcionalidade 1: Traduzir texto via Gemini ──────────────────
-  Future<void> traduzir(String texto) async {
+  Future <void> traduzir(String texto) async {
     if (texto.trim().isEmpty) return;
 
     final from = sourceLangNotifier.value;
@@ -96,8 +95,7 @@ class TranslationService {
       };
     }
   }
-
-  // ─── Funcionalidade 2: Histórico de traduções ─────────────────────
+//historico
   void _adicionarAoHistorico(
     String original,
     String translated,
@@ -120,7 +118,7 @@ class TranslationService {
     historyNotifier.value = [];
   }
 
-  // ─── Funcionalidade 3: Favoritos ──────────────────────────────────
+//favoritos
   void toggleFavorito(TranslationItem item) {
     item.isFavorite = !item.isFavorite;
 
@@ -134,7 +132,6 @@ class TranslationService {
     historyNotifier.value = [...historyNotifier.value];
   }
 
-  // ─── Funcionalidade 4: Inverter idiomas ───────────────────────────
   void inverterIdiomas() {
     final temp = sourceLangNotifier.value;
     sourceLangNotifier.value = targetLangNotifier.value;

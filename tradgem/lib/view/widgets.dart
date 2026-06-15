@@ -285,9 +285,6 @@ class TranslationBoxWidget extends HookWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// WIDGET: Barra de seleção de idiomas com botão inverter
-// ═══════════════════════════════════════════════════════════════
 class LanguageBarWidget extends StatelessWidget {
   const LanguageBarWidget({super.key});
 
@@ -320,9 +317,6 @@ class LanguageBarWidget extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// WIDGET: Card de item do histórico/favoritos
-// ═══════════════════════════════════════════════════════════════
 class TranslationCardWidget extends StatelessWidget {
   final TranslationItem item;
   final VoidCallback? onFavoriteToggle;

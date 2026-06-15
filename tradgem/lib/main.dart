@@ -13,12 +13,11 @@ class TranslateApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // GetMaterialApp com gerência de rotas — padrão receita 9
+    
     return GetMaterialApp(
       title: 'TranslateAI',
       debugShowCheckedModeBanner: false,
 
-      // Tema escuro
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.dark(
@@ -38,7 +37,6 @@ class TranslateApp extends StatelessWidget {
         ),
       ),
 
-      // Gerência de rotas com GetX — padrão receita 9
       initialRoute: '/',
       getPages: [
         GetPage(name: '/',          page: () => const HomeScreen()),

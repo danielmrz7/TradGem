@@ -1,7 +1,7 @@
 class Language {
   final String name;
   final String code;
-  final String flag; // emoji de bandeira
+  final String flag; 
 
   const Language({
     required this.name,
@@ -10,7 +10,6 @@ class Language {
   });
 }
 
-// Lista de idiomas disponíveis para tradução
 final List<Language> availableLanguages = [
   const Language(name: 'Português',  code: 'pt', flag: '🇧🇷'),
   const Language(name: 'Inglês',     code: 'en', flag: '🇺🇸'),
