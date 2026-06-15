@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             const Text(
-              'TranslateAI',
+              'TradGem',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
@@ -124,7 +124,7 @@ class HistoryScreen extends StatelessWidget {
                       translationService.limparHistorico();
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content: Text('Histórico limpo!'),
+                          content: Text('Histórico limpo'),
                           backgroundColor: Color(0xFF7C6AF7),
                         ),
                       );
@@ -272,7 +272,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             const Text(
-              'TranslateAI',
+              'TradGem',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
@@ -301,14 +301,14 @@ class AboutScreen extends StatelessWidget {
               icon: Icons.check_circle_outline,
               title: 'Funcionalidades',
               subtitle:
-                  '• Tradução em 12 idiomas\n• Histórico de traduções\n• Favoritos\n• Inversão de idiomas',
+                  '• Tradução em 12 idiomas\n Histórico de traduções\n Favoritos\n Inversão de idiomas',
             ),
             const SizedBox(height: 12),
             _InfoCard(
               icon: Icons.architecture,
               title: 'Arquitetura',
               subtitle:
-                  '• Gerência de estado: ValueNotifier\n• Gerência de rotas: GetX\n• Separação: Model / Service / View',
+                  'Gerência de estado: ValueNotifier\n Gerência de rotas: GetX\n Separação: Model / Service / View',
             ),
           ],
         ),

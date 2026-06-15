@@ -15,7 +15,7 @@ class TranslateApp extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return GetMaterialApp(
-      title: 'TranslateAI',
+      title: 'TradGem',
       debugShowCheckedModeBanner: false,
 
       theme: ThemeData(
