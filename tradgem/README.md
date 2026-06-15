@@ -12,7 +12,7 @@ O TradGem é um aplicativo mobile/desktop desenvolvido em Flutter como projeto d
 
 # Funcionalidades
 
--Tradução em tempo real — Traduz textos utilizando o modelo Gemini AI
+- Tradução em tempo real — Traduz textos utilizando o modelo Gemini AI
 - 12 idiomas suportados — Português, Inglês, Espanhol, Francês, Alemão, Italiano, Japonês, Chinês, Árabe, Russo, Coreano e Hindi
 - Inversão de idiomas— Troca o idioma de origem e destino com um clique
 - Histórico de traduções — Mantém um registro das traduções realizadas na sessão
@@ -149,5 +149,5 @@ Desenvolvido por Daniel Mariz como projeto de POO em Flutter.
 ---
 
 <p align="center">
-  Feito com Flutter · Powered by Gemini AI
+  Feito com Flutter
 </p>

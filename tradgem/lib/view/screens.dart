@@ -70,10 +70,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 6),
-                  Text(
-                    'Powered by Gemini AI',
-                    style: TextStyle(color: Colors.white38, fontSize: 13),
-                  ),
                 ],
               ),
             ),
